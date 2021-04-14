@@ -1,0 +1,17 @@
+{
+  "name": "htm-backend",
+  "version": "1.0.0",
+  "description": "This is Hotel Management Backend",
+  "scripts": {
+    "dev:admin": "cd admin && npm start",
+    "dev:api": "cd api && npm start",
+    "dev:room": "cd rooms && npm start",
+    "dev": "concurrently npm:dev:*",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kunal",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^6.0.0"
+  }
+}
