@@ -32,15 +32,20 @@ const saveCustomer = async (req, res) => {
     const result = await CustomerService.saveCustomer(body);
     emailNotifcationService.sendEmail(email, userName, password);
     console.log("result ==>", result);
-    res.status(200).send(result);
+    return res.status(200).send({
+      result: "User Created Successfully"
+    });
   } catch (err) {
     console.log("Error ==>", err);
-    if(err.code == '11000'){
-      res.status(200).send(result);
-    }else {
-
+    if (err.code == 11000) {
+      return res.status(200).send(
+        "Hotel Already Registered"
+      );
+    } else {
+      return res.status(500).send({
+        error: "Something went wrong"
+      });
     }
-    res.status(500).send(err.message || err);
   }
 };
 

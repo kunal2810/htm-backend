@@ -17,10 +17,9 @@ const emailNotificationService = {
         // send mail with defined transport object
         let info = await transporter.sendMail({
             from: 'codificasoft@gmail.com', // sender address
-            to: "kunalarora2810@gmail.com", // list of receivers
-            subject: "Hello", // Subject line
-            text: "Hello world?", // plain text body
-            html: "<b>Hello world?</b>", // html body
+            to: email, // list of receivers
+            subject: "Hotel Tracking System Onboard", // Subject line
+            text: "Hello \n\n Here is your Username :- " + userName + "\n Here is your password :- " + password + "\n\nPlease user this username and password for login in App.\n\n Thank you,\nCodificasoft Pvt. ltd.",
         });
 
         console.log("Message sent: %s", info.messageId);
