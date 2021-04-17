@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "This is Hotel Management Backend",
   "scripts": {
-    "dev:admin": "cd admin && npm start",
-    "dev:api": "cd api && npm start",
-    "dev:room": "cd rooms && npm start",
+    "dev:admin": "cd admin && npm install && npm start",
+    "dev:api": "cd api && npm install && npm start",
+    "dev:room": "cd rooms && npm install && npm start",
     "start": "concurrently npm:dev:*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
