@@ -6,7 +6,7 @@
     "dev:admin": "cd admin && npm start",
     "dev:api": "cd api && npm start",
     "dev:room": "cd rooms && npm start",
-    "dev": "concurrently npm:dev:*",
+    "start": "concurrently npm:dev:*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kunal",
